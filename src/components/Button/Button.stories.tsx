@@ -3,21 +3,23 @@ import { Story, Meta } from '@storybook/react';
 
 import Button  from './Button';
 import {ButtonProps} from "./Button.types"
+import { withThemes } from 'storybook-addon-themes';
 
 export default {
-  title: 'Marbella/Button',
+  title: 'ChatBot/Button',
   component: Button,
   argTypes: {
   },
 } as Meta<typeof Button>;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
-
+console.log(withThemes);
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   disabled: false,
   text: 'Primary',
+  
 };
 
 export const Secondary = Template.bind({});

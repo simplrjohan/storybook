@@ -21,5 +21,8 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
+    'storybook-addon-themes',
+    '@react-theming/storybook-addon',
+    "storybook-addon-styled-component-theme/dist/preset"
   ]}
