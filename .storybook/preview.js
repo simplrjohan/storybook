@@ -7,9 +7,10 @@ import { withThemesProvider } from "storybook-addon-styled-component-theme";
 
 const defaultTheme = {
   name: "DEFAULT",
-  backgroundColor: "white",
+  backgroundColor: "yellow",
   textColor: "dimgrey",
-  borderRadius: "30px"
+  borderRadius: "30px",
+  color: 'red'
 };
 
 const darkTheme = {
@@ -25,6 +26,17 @@ export const getAllThemes = () => {
 
 addDecorator(withThemesProvider(getAllThemes(), ThemeProvider));
 
+// export const decorators = [
+//   (Story) => {
+//     const mode = addDecorator(withThemesProvider(getAllThemes(), ThemeProvider));
+
+//     return (
+//       <ThemeProvider theme={mode}>
+//         <Story />
+//       </ThemeProvider>
+//     )
+//   }
+// ]
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
