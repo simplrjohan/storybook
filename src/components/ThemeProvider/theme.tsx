@@ -10,7 +10,42 @@ const themes = [ darkTheme, defaultTheme ]
 const themeNames = Object.keys(themes);
 
 const SimplrChatThemeProvider = ({ children, theme= defaultTheme }:any) => {
+
   return <ThemeProvider  theme={theme}>{children}</ThemeProvider>;
 };
 
  export default SimplrChatThemeProvider;
+
+// export default {
+//   component: SimplrChatThemeProvider,
+//   title: 'Component',
+//   argTypes: {
+//     icon: {
+//       control: {
+//         type: 'select'
+//       },
+//       options: themes,
+//       defaultValue: defaultTheme
+//     }
+//   }
+// } as 
+
+//  export  ({ children }) => {
+     
+//     return (
+//       <ThemeProvider theme={themes[theme]}>
+//         {children}
+//       </ThemeProvider>
+//     );
+
+
+//   };  // const theme =
+  // argTypes: {
+  //     style: { control: 'object' }
+  //   }
+  // //  select(
+  //   "Theme",
+  //   themeNames,
+  //   themeNames[0],
+  //   "Themes"
+  // );

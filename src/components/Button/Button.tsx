@@ -52,7 +52,7 @@ const Button: FC<ButtonProps> = ({
   // console.log(args)
 
   return (
-    <SimplrChatThemeProvider theme={themify}>
+    <SimplrChatThemeProvider theme={darkTheme}>
       <StyledButton
         type='button'
         onClick={onClick}
@@ -63,6 +63,7 @@ const Button: FC<ButtonProps> = ({
       >
         {text}
       </StyledButton>
+
     </SimplrChatThemeProvider>
   );
 };

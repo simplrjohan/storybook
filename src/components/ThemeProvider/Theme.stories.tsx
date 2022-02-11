@@ -12,16 +12,16 @@ const themeNames = Object.keys(themes);
 export default {
     title: 'ChatBot/Theme',
     component: SimplrChatThemeProvider,
-    controls: {
-      presetColors: [{ color: '#ff4785', title: 'Coral' }, 'rgba(0, 159, 183, 1)', '#fe4a49'],
-    },
-    argTypes: {
-      theme:{
-        options: themeNames,
-        control: { type: 'radio' },
-        mapping: themes
-      }
-    },
+    // controls: {
+    //   presetColors: [{ color: '#ff4785', title: 'Coral' }, 'rgba(0, 159, 183, 1)', '#fe4a49'],
+    // },
+    // argTypes: {
+    //   theme:{
+    //     options: themeNames,
+    //     control: { type: 'radio' },
+    //     mapping: themes
+    //   }
+    // },
    
   } as Meta<typeof SimplrChatThemeProvider>;
   
