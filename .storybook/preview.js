@@ -1,58 +1,82 @@
 import { addDecorator } from "@storybook/react"
-import { withThemes } from "storybook-addon-themes"
-import {theme1, theme2} from './../src/components/ThemeProvider/theme'
+import {darkTheme, defaultTheme} from './../src/components/ThemeProvider/themes'
 import {ThemeProvider} from 'styled-components'
 import { withThemesProvider } from "storybook-addon-styled-component-theme";
 
-
-const defaultTheme = {
-  name: "DEFAULT",
-  backgroundColor: "yellow",
-  textColor: "dimgrey",
-  borderRadius: "30px",
-  color: 'red'
-};
-
-const darkTheme = {
-  name: "DARK",
-  backgroundColor: "black",
-  textColor: "seashell",
-  borderRadius: "100px"
-};
 
 export const getAllThemes = () => {
   return [defaultTheme, darkTheme];
 };
 
-addDecorator(withThemesProvider(getAllThemes(), ThemeProvider));
+const THEMES = [
+  {
+    name: 'Light',
+    backgroundColor: '#fff',
+    palette: {
+      TextField: {
+        backgroundColor: 'red',
+        fontColor: 'red',
+        borderColor: '#e2e6f3',
+        placeholderColor: '#999999',
+        opacityDisabled: 0.25,
+        borderError: '#e25a66',
+      },
+      Common: {
+        backgroundColor: '#1a213f',
+        fontColor: '#808ab1',
+        borderError: '#e25a66'
+      },
+    }
+  },
+  {
+    name: 'Dark',
+    backgroundColor: 'red',
+    palette: {
+      TextField: {
+        backgroundColor: '#1a213f',
+        fontColor: '#808ab1',
+        borderColor: '#808ab1',
+        placeholderColor: '#808ab1',
+        opacityDisabled: 0.45,
+        borderError: '#e25a66'
+      },
+      Common: {
+        backgroundColor: '#1a213f',
+        fontColor: '#808ab1',
+        borderError: '#e25a66'
+      },
+    }
+  },
+]
 
-// export const decorators = [
-//   (Story) => {
-//     const mode = addDecorator(withThemesProvider(getAllThemes(), ThemeProvider));
-
-//     return (
-//       <ThemeProvider theme={mode}>
-//         <Story />
-//       </ThemeProvider>
-//     )
-//   }
-// ]
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-    themes:  [
-      { name: 'twitter', class: 'theme-twt', color: '#00aced', default: true },
-      { name: 'facebook', class: 'theme-fb', color: '#3b5998' }
-    ],
-    options: {
-      theme: theme2,
-    },
-  },
+  themes: {
+          default: 'twitter',
+          list: [
+            { name: 'twitter', class: 'theme-twt', color: '#00aced' },
+            { name: 'facebook', class: 'theme-fb', color: '#3b5998' }
+          ],
+        },
   
 }
 
+// Example with disabled preview
+// export const decorators = [withThemesProvider(THEMES, { disableThemePreview: true })];
 
+// with preview
+// export const decorators = [
+//   withThemesProvider(THEMES)
+// ];
+
+
+
+// export const decorators = [
+//   (Story) => (
+//     <ThemeProvider theme={defaultTheme}>
+//       <Story />
+//     </ThemeProvider>
+//   ),
+// ];
+
+addDecorator(withThemesProvider(getAllThemes(), ThemeProvider));

@@ -7,7 +7,7 @@ interface ButtonProps {
     disabled?: boolean;
     size?: "small" | "medium" | "large";
     onClick?: MouseEventHandler<HTMLButtonElement>;
-    story?: any;
+    themify?: any;
 }
 
 declare const Button: FC<ButtonProps>;
