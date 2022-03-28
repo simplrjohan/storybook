@@ -27,8 +27,6 @@ module.exports = {
    
     'storybook-addon-themes',
     "storybook-addon-styled-component-theme/dist/preset",
-    "themeprovider-storybook/register",
-
     '@storybook/addon-controls'
 
   ]}

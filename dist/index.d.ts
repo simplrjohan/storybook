@@ -7,10 +7,19 @@ interface ButtonProps {
     disabled?: boolean;
     size?: "small" | "medium" | "large";
     onClick?: MouseEventHandler<HTMLButtonElement>;
-    themify?: any;
+    theme?: any;
 }
 
 declare const Button: FC<ButtonProps>;
+
+interface TextProps {
+    primary?: boolean;
+    disabled?: boolean;
+    size?: "small" | "medium" | "large";
+    theme?: any;
+}
+
+declare const Text: FC<TextProps>;
 
 declare const background: {
     app: string;
@@ -148,4 +157,4 @@ declare namespace animation_d {
   };
 }
 
-export { Button, animation_d as animation, global_d as global, styles_d as styles };
+export { Button, Text, animation_d as animation, global_d as global, styles_d as styles };

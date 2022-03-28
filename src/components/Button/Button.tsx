@@ -18,8 +18,7 @@ const StyledButton = styled.button<ButtonProps>`
       ? '9px 30px 11px'
       : '14px 30px 16px'};
   color: ${(props) => (props.primary ? '#1b116e' : 'green')};
-  // background-color: ${(props) => (props.primary ? '#6bedb5' : '#1b116e')};
-   background-color: ${(props) => props.theme.background};
+  background-color: ${(props) => (props.primary ? '#6bedb5' : '#1b116e')};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   &:hover {
     //   background-color: ${(props) =>
