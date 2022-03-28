@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import { ButtonProps } from './Button.types';
-const StyledButton = styled.button<ButtonProps>`
+import { TextProps } from './Text.types';
+const StyledText = styled.div<TextProps>`
   border: 0;
   line-height: 1;
   font-size: 15px;
@@ -19,7 +19,7 @@ const StyledButton = styled.button<ButtonProps>`
       : '14px 30px 16px'};
   color: ${(props) => (props.primary ? '#1b116e' : 'green')};
   // background-color: ${(props) => (props.primary ? '#6bedb5' : '#1b116e')};
-  background-color: ${theme => theme.textColor};
+  background-color: ${(theme) => theme.textColor};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   &:hover {
     //   background-color: ${(props) =>
@@ -38,32 +38,26 @@ const StyledButton = styled.button<ButtonProps>`
   color: ${(props) => props.theme.color};
 `;
 
-const Button: FC<ButtonProps> = ({
+const Text: FC<TextProps> = ({
   size,
   primary,
   disabled,
-  text,
   theme,
-  onClick,
+  
   ...props
 }) => {
-
   return (
-    <> 
-      <StyledButton
-        type='button'
-        onClick={onClick}
+    
+      <StyledText
+        // onClick={onClick}
         primary={primary}
         disabled={disabled}
         size={size}
-        className="theme-twt"
         {...props}
       >
-        {text}
-      </StyledButton>
-
-    </>
+        Text{' '}sa
+      </StyledText>
   );
 };
 
-export default Button;
+export default Text;

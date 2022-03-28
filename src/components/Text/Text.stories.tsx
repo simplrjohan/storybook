@@ -1,13 +1,13 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import Button  from './Button';
-import {ButtonProps} from "./Button.types"
+import Text  from './Text';
+import {TextProps} from "./Text.types"
 import { storiesOf } from '@storybook/react';
 
 export default {
-  title: 'Dashboard/Button',
-  component: Button,
+  title: 'Dashboard/Text',
+  component: Text,
   // controls: {
   //   presetColors: [{ color: '#ff4785', title: 'Coral' }, 'rgba(0, 159, 183, 1)', '#fe4a49'],
   // },
@@ -19,24 +19,22 @@ export default {
     // }
   },
  
-} as Meta<typeof Button>;
+} as Meta<typeof Text>;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
-storiesOf('Button', module)
+const Template: Story<TextProps> = (args) => <Text {...args} />;
+storiesOf('Text', module)
 
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   disabled: false,
-  text: 'Primary',  
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   primary: false,
   disabled: false,
-  text: "Secondary",
 
 };
 
@@ -44,7 +42,6 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   primary: false,
   disabled: true,
-  text: 'Disabled',
 
 };
 
@@ -53,7 +50,6 @@ Small.args = {
   primary: true,
   disabled: false,
   size:"small",
-  text: 'Small',
 
 };
 
@@ -62,7 +58,6 @@ Medium.args = {
   primary: true,
   disabled: false,
   size:"medium",
-  text: 'Medium',
 
 
 };
@@ -72,6 +67,5 @@ Large.args = {
   primary: true,
   disabled: false,
   size:"large",
-  text: 'Large',
 };
 Primary.decorators = [(Story) => <div style={{ display: 'flex', margin: 'auto' }}><Story /></div>]

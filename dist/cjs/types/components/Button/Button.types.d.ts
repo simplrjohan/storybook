@@ -5,5 +5,4 @@ export interface ButtonProps {
     disabled?: boolean;
     size?: "small" | "medium" | "large";
     onClick?: MouseEventHandler<HTMLButtonElement>;
-    themify?: any;
 }

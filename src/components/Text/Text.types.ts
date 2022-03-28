@@ -1,11 +1,10 @@
 import {  MouseEventHandler } from "react"
 
 
-export interface ButtonProps {
-    text?: string,
+export interface TextProps {
     primary?:boolean,
     disabled?: boolean,
     size?: "small" | "medium" | "large",
-    onClick?: MouseEventHandler<HTMLButtonElement>,
+    // onClick?: MouseEventHandler<HTMLButtonElement>,
     theme?:any
 }
