@@ -17,14 +17,14 @@ const StyledText = styled.div<TextProps>`
       : props.size === 'medium'
       ? '9px 30px 11px'
       : '14px 30px 16px'};
-  color: ${(props) => (props.primary ? '#1b116e' : 'green')};
+  color: red
+
   // background-color: ${(props) => (props.primary ? '#6bedb5' : '#1b116e')};
-  background-color: ${(theme) => theme.textColor};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   &:hover {
     //   background-color: ${(props) =>
       props.primary ? '#55bd90' : '#6bedb5'};
-    background-color: ${(props) => props.theme.color};
+    // background-color: ${(props) => props.theme.color};
   }
   &:active {
     border: solid 2px #1b116e;
@@ -35,7 +35,8 @@ const StyledText = styled.div<TextProps>`
         ? '7px 28px 9px'
         : '12px 28px 14px'};
   }
-  color: ${(props) => props.theme.color};
+  color: red
+
 `;
 
 const Text: FC<TextProps> = ({
