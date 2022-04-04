@@ -127,7 +127,6 @@ svg {
 export const CurrentDayTitle = styled.div`
   text-align: center;
 
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -158,7 +157,7 @@ export const PreviousDayBlock = styled.div`
   display: block;
   align-items: flex-end;
   height: auto;
-  width: 70%;
+  width: 80%;
   text-align: center;
   padding: 10px 20px;
   background: ${colors.white50};
@@ -166,7 +165,6 @@ export const PreviousDayBlock = styled.div`
 
   .previous-label {
     color: ${colors.darkGray1};
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
@@ -174,7 +172,6 @@ export const PreviousDayBlock = styled.div`
   }
   .previous-number {
     font-size: 16px;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     line-height: 19px;
