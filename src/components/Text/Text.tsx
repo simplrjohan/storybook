@@ -17,7 +17,7 @@ const StyledText = styled.div<TextProps>`
       : props.size === 'medium'
       ? '9px 30px 11px'
       : '14px 30px 16px'};
-  color: red
+  // color: red
 
   // background-color: ${(props) => (props.primary ? '#6bedb5' : '#1b116e')};
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
@@ -35,7 +35,7 @@ const StyledText = styled.div<TextProps>`
         ? '7px 28px 9px'
         : '12px 28px 14px'};
   }
-  color: red
+  color: black
 
 `;
 
@@ -50,13 +50,12 @@ const Text: FC<TextProps> = ({
   return (
     
       <StyledText
-        // onClick={onClick}
         primary={primary}
         disabled={disabled}
         size={size}
         {...props}
       >
-        Text{' '}sa
+        Text Stories
       </StyledText>
   );
 };
